@@ -11,11 +11,12 @@ import java.util.List;
 public class MyAIDLService extends Service {
 
     List<Person> personList = new ArrayList<>();
-    PersonDatabase personDatabase;
+//    PersonDatabase personDatabase;
 
     public MyAIDLService() {
-        personDatabase = new PersonDatabase(null);
-        personList.addAll(personDatabase.getPeople());
+        //was getting error with Context when trying to use database
+//        personDatabase = new PersonDatabase(getApplicationContext());
+        personList.addAll(PersonGenerator.generate(10));
     }
 
     @Override
@@ -27,7 +28,7 @@ public class MyAIDLService extends Service {
 
         @Override
         public List<Person> getPersonList() throws RemoteException {
-            return personDatabase.getPeople();
+            return personList;
         }
     };
 }

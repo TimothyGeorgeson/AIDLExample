@@ -1,8 +1,8 @@
 // MyAIDLInterface.aidl
-package com.example.consultants.aidlexample;
+package com.example.aidlclient;
 
 // Declare any non-default types here with import statements
-import com.example.consultants.aidlexample.Person;
+import com.example.aidlclient.Person;
 
 interface MyAIDLInterface {
     /**

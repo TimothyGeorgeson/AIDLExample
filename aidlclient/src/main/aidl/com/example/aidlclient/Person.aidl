@@ -1,4 +1,4 @@
 // Person.aidl
-package com.example.consultants.aidlexample;
+package com.example.aidlclient;
 
 parcelable Person;
